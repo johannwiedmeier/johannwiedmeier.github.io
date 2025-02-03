@@ -1,0 +1,23 @@
+title: Johann Wiedmeier
+description: Software Engineer & Architect
+baseurl: "" # leave empty for user site
+
+# Build settings
+markdown: kramdown
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: Resume
+    url: /resume
+  - title: Imprint
+    url: /imprint 
