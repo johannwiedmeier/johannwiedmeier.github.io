@@ -458,7 +458,7 @@ ul {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .hero {
         padding: 2rem 0;
     }
@@ -575,6 +575,10 @@ ul {
         text-align: center;
         margin-bottom: 1rem;
     }
+
+    .imprint {
+        padding: 2rem 1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -680,9 +684,3 @@ ul {
     line-height: 1.6;
     margin-bottom: 1rem;
 }
-
-@media (max-width: 768px) {
-    .imprint {
-        padding: 2rem 1rem;
-    }
-} 
