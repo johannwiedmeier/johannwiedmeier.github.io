@@ -4,6 +4,7 @@ baseurl: "" # leave empty for user site
 
 # Build settings
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
 
 # Exclude from processing
 exclude:
@@ -19,5 +20,20 @@ navigation:
     url: /
   - title: Resume
     url: /resume
+  - title: Blog
+    url: /blog
   - title: Imprint
     url: /imprint 
+
+# Blog settings
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Johann Wiedmeier"
+      
+# Plugins
+plugins:
+  - jekyll-feed 

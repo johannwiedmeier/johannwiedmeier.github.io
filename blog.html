@@ -1,0 +1,47 @@
+---
+layout: default
+title: Blog
+---
+
+<section class="blog-section">
+    <div class="container">
+        <h1 class="section-heading">Blog</h1>
+        
+        <div class="blog-list">
+            {% for post in site.posts %}
+            <article class="blog-card">
+                <h2 class="blog-card-title">
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h2>
+                <div class="blog-card-meta">
+                    <span class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</span>
+                    {% if post.author %}
+                    <span class="blog-card-author">by {{ post.author }}</span>
+                    {% endif %}
+                </div>
+                <div class="blog-card-excerpt">
+                    {% if post.excerpt %}
+                    {{ post.excerpt | strip_html | truncatewords: 50 }}
+                    {% endif %}
+                </div>
+                <div class="blog-card-footer">
+                    <a href="{{ post.url | relative_url }}" class="blog-card-read-more">Read more →</a>
+                    {% if post.tags.size > 0 %}
+                    <div class="blog-card-tags">
+                        {% for tag in post.tags %}
+                        <span class="blog-card-tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        
+        {% if site.posts.size == 0 %}
+        <div class="blog-empty">
+            <p>No posts yet. Check back soon!</p>
+        </div>
+        {% endif %}
+    </div>
+</section> 
