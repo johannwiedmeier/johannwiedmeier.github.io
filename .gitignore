@@ -34,4 +34,6 @@ Thumbs.db
 *~
 
 # Log files
-*.log 
+*.log
+
+CLAUDE.md
